@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background: #0f172a;
+  color: white;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: #020617;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  color: #38bdf8;
+  margin-bottom: 30px;
+}
+
+.menu div {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.menu div:hover {
+  background: #1e293b;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.upload-box {
+  margin-top: 20px;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+button {
+  background: #38bdf8;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #ef4444;
+  margin-top: 5px;
+}
+
+.grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.asset {
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 10px;
+}
+.asset button {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.upload-box input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.search {
+  width: 250px;
+}

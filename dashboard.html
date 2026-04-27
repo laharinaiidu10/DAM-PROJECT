@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+
+<div class="sidebar">
+  <div class="logo">Digital Asset Management</div>
+  <div class="menu">
+    <div onclick="go('dashboard.html')">Dashboard</div>
+    <div onclick="go('upload.html')">Upload</div>
+    <div onclick="go('assets.html')">Assets</div>
+    <div onclick="go('analytics.html')">Analytics</div>
+  </div>
+</div>
+
+<div class="main">
+<h2>Dashboard</h2>
+
+<div class="cards">
+  <div class="card">📂 Total Files: <span id="total"></span></div>
+</div>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+<script>loadAssets()</script>
+</body>
+</html>
