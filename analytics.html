@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<div class="sidebar">
+  <div class="menu">
+    <div onclick="go('dashboard.html')">Dashboard</div>
+    <div onclick="go('upload.html')">Upload</div>
+    <div onclick="go('assets.html')">Assets</div>
+    <div onclick="go('analytics.html')">Analytics</div>
+  </div>
+</div>
+
+<div class="main">
+<h2>Analytics</h2>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+let chart;
+
+function renderChart(data) {
+  const count = {};
+
+  data.forEach(a => {
+    const ext = a.filename.split(".").pop();
+    count[ext] = (count[ext] || 0) + 1;
+  });
+
+  const ctx = document.getElementById("chart");
+
+  if (chart) chart.destroy();
+
+  chart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: Object.keys(count),
+      datasets: [{ data: Object.values(count) }]
+    }
+  });
+}
+
+loadAssets();
+</script>
+
+</body>
+</html>
